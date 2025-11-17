@@ -1,0 +1,1 @@
+# kubespot-for-mac
