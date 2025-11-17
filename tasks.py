@@ -26,9 +26,9 @@ def setup(c):
     print("Setting up Kubespot for Mac...")
 
     print("Installing depedencies...")
-    out = c.run("which brew", hide=True)
-    if "not found" in out.stdout:
+    out = c.run("which brew", hide=True, warn=True)
+    if out.failed:
         print("Homebrew not found. Installing Homebrew...")
-        # TODO:
+        c.run('/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"')
     else:
         c.run("brew upgrade")
