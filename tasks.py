@@ -29,6 +29,11 @@ def setup(c):
     out = c.run("which brew", hide=True)
     if "not found" in out.stdout:
         print("Homebrew not found. Installing Homebrew...")
-        # TODO:
+        # TODO: Install Homebrew
     else:
         c.run("brew upgrade")
+
+
+    # Edit ollama to bind on 0.0.0.0
+    brew services --json
+    Add
