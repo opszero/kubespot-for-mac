@@ -75,7 +75,6 @@ def setup_minikube_github_actions(c):
           --set githubConfigUrl="{github_config_url}" \
           --set githubConfigSecret.github_token="{github_pat}" \
           --set containerMode.type=dind \
-          --set minRunners=4 \
           --set containerMode.kubernetesModeWorkVolumeClaim.resources.requests.storage="5Gi" \
           oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set"""
     )
