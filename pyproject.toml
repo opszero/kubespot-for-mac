@@ -1,0 +1,7 @@
+[project]
+name = "kubespot-for-mac"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "fabric>=3.2.2",
+]
